@@ -1,10 +1,23 @@
-<h1>Editing <%= human_name.downcase %></h1>
-
-<%%= render "form", <%= singular_table_name %>: @<%= singular_table_name %> %>
+<div class='card border-primary mb-3'>
+  <h3 class='card-header'>
+    <%%= I18n.t('template.edit_model', model: <%= class_name %>.model_name.human) %> %>
+  </h3>
+  <div class='card-body'>
+    <div class='bs-component'>
+      <%%= render "form", <%= singular_table_name %>: @<%= singular_table_name %> %>
+    </div>
+  </div>
+</div>
 
 <br>
 
 <div>
-  <%%= link_to "Show this <%= human_name.downcase %>", <%= model_resource_name(prefix: "@") %> %> |
-  <%%= link_to "Back to <%= human_name.pluralize.downcase %>", <%= index_helper(type: :path) %> %>
+  <div class='controls d-flex flex-row'>
+    <div class='p-2'>
+      <%%= to_show_button(@<%= singular_table_name %>) %>
+    </div>
+    <div class='p-2'>
+      <%%= to_index_button <%= class_name %> %>
+    </div>
+  </div>
 </div>

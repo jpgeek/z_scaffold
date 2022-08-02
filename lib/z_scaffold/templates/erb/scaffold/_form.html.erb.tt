@@ -1,38 +1,14 @@
-Potato
 <%%= form_with(model: <%= model_resource_name %>) do |form| %>
-  <%% if <%= singular_table_name %>.errors.any? %>
-    <div style="color: red">
-      <h2><%%= pluralize(<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h2>
+  <%%= render partial: 'common/form_errors', locals: {model: @<%= singular_table_name %>} %>
 
-      <ul>
-        <%% <%= singular_table_name %>.errors.each do |error| %>
-          <li><%%= error.full_message %></li>
-        <%% end %>
-      </ul>
-    </div>
-  <%% end %>
+  <%% fh = Zs::Bootstrap::VerticalFormHelper.new(self, form) %>
+
 
 <% attributes.each do |attribute| -%>
-  <div>
-<% if attribute.password_digest? -%>
-    <%%= form.label :password, style: "display: block" %>
-    <%%= form.password_field :password %>
-  </div>
+  <%%= fh.decorated_field({field: {field: :<%= attribute.column_name %>, method: :<%= attribute.field_type %>}}) %>
+<% end %>
 
   <div>
-    <%%= form.label :password_confirmation, style: "display: block" %>
-    <%%= form.password_field :password_confirmation %>
-<% elsif attribute.attachments? -%>
-    <%%= form.label :<%= attribute.column_name %>, style: "display: block" %>
-    <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, multiple: true %>
-<% else -%>
-    <%%= form.label :<%= attribute.column_name %>, style: "display: block" %>
-    <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %> %>
-<% end -%>
-  </div>
-
-<% end -%>
-  <div>
-    <%%= form.submit %>
+    <%%= submit_button( @<%= model_resource_name %> ) %>
   </div>
 <%% end %>
