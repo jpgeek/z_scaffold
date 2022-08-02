@@ -1,8 +1,9 @@
 # ZScaffold
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/z_scaffold`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A set of controller and view scaffold templates that are Bootstrap 5, Rails 7, and i18n enabled.  Still very much a work
+in progress, so use at your own risk.  Might be best just to copy the templates.  This also relies on the helpers and
+translations found in https://github.com/jpgeek/rails_i18n_scaffold.  I will probably be merging these two gems shortly.
+If people show an interest, it might make sense to modify this to allow different variations on the templates.
 
 ## Installation
 

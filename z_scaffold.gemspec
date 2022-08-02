@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "rails", ">= 7.0.3.1"
+  spec.add_dependency 'bootstrap_icons_rails'
 
   # spec.add_dependency "example-gem", "~> 1.0"
   # spec.add_development_dependency "example-gem", [">= 0"]
