@@ -1,5 +1,9 @@
 # ZScaffold
 
+These have been merged into bsi18n_scaffold, so this will no longer be maintained.
+
+-----
+
 A set of controller and view scaffold templates that are Bootstrap 5, Rails 7, and i18n enabled.  Still very much a work
 in progress, so use at your own risk.  Might be best just to copy the templates.  This also relies on the helpers and
 translations found in https://github.com/jpgeek/rails_i18n_scaffold.  I will probably be merging these two gems shortly.
