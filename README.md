@@ -1,6 +1,6 @@
 # ZScaffold
 
-These have been merged into bsi18n_scaffold, so this will no longer be maintained.
+These have been merged into [bsi18n_scaffold[(https://github.com/jpgeek/bsi18n_scaffold), so this will no longer be maintained.
 
 -----
 
